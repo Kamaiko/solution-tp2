@@ -109,7 +109,7 @@ Methode utilisée : 'cat /etc/caddy/Caddyfile'
 
 Solution de la mission M04
 
-État de la mission : résolue, partiellement résolue, non résolue
+État de la mission : résolue
 
 Démarche
 M04.1
@@ -140,6 +140,14 @@ M04.4
 
 
 M04.5
++-----------------------------------------------------------------------------------------------------------------+
+| Grants for patrickpatenaude@%                                                                                   |
++-----------------------------------------------------------------------------------------------------------------+
+| GRANT USAGE ON *.* TO `patrickpatenaude`@`%` IDENTIFIED BY PASSWORD '*AA1420F182E88B9E5F874F6FBE7459291E8F4601' |
+| GRANT ALL PRIVILEGES ON `nextcloud`.* TO `patrickpatenaude`@`%`                                                 |
++-----------------------------------------------------------------------------------------------------------------+
+2 rows in set (0,00 sec)
+
 
 
 
@@ -148,11 +156,33 @@ M04.5
 
 Solution de la mission M05
 
-État de la mission : résolue, partiellement résolue, non résolue
-
+État de la mission : résolue
 Démarche
 À compléter
 
+M05.1
+ Adresse IP du serveur nextcloud : '172.18.0.3'
+ Adresse IP du serveur mariadb : '172.18.0.2'
+ 
+M05.2
+ Port de Nextcloud : '80'
+ Port de MariaDB :  '3306'.
+ 
+ 
+M05.3
+ Le script 'occ' se trouve dans le repertoire '/var/www/html/occ'. Il est trouve par la commande 'find / -name occ'
+ Le shebang de ce script est : '#!/usr/bin/env php'. Il est trouve par la commande 'head -n 1 /usr/src/nextcloud/occ'
+ 
+ 
+ 
+M05.4
+ 
+ 
+M05.5
+ 
+ 
+ 
+ 
 
 
 
@@ -160,9 +190,7 @@ Démarche
 
 Solution de la mission M06
 
-État de la mission : résolue, partiellement résolue, non résolue
-
-Démarche
+État de la mission : résolue
 À compléter
 
 
@@ -173,7 +201,7 @@ Démarche
 
 Solution de la mission M07
 
-État de la mission : résolue, partiellement résolue, non résolue
+État de la mission : résolue
 
 Démarche
 À compléter
@@ -186,7 +214,7 @@ Démarche
 
 Solution de la mission M08
 
-État de la mission : résolue, partiellement résolue, non résolue
+État de la mission : résolue
 
 Démarche
 À compléter
@@ -200,7 +228,7 @@ Démarche
 
 Solution de la mission M09
 
-État de la mission : résolue, partiellement résolue, non résolue
+État de la mission : résolue
 
 Démarche
 À compléter
