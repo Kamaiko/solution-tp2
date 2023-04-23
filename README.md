@@ -138,10 +138,10 @@ Je me suis connecté à la base de donnée mariadb avec le client MySQL. Voici l
 
 
 #### M04.4
-- 'create database nextcloud;' : ```Query OK, 1 row affected (0,00 sec)```
-- 'create user 'patrickpatenaude'@'%' identified by 'qwerty';  :  ```Query OK, 0 rows affected (0,00 sec)```
-- 'grant all privileges on nextcloud.* to 'patrickpatenaude'@'%';  :  ```Query OK, 0 rows affected (0,00 sec)```
-- 'flush privileges' ;  :  ```Query OK, 0 rows affected (0,00 sec)```
+- ```create database nextcloud;``` : Query OK, 1 row affected (0,00 sec)
+- ```create user 'patrickpatenaude'@'%' identified by 'qwerty';```  :  Query OK, 0 rows affected (0,00 sec)
+- ```grant all privileges on nextcloud.* to 'patrickpatenaude'@'%';```  :  Query OK, 0 rows affected (0,00 sec)
+- ```flush privileges; ```  :  Query OK, 0 rows affected (0,00 sec)
 
 
 
