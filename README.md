@@ -1,4 +1,4 @@
-#  🚀 TP1: Solutions
+#  🚀 TP2: Solutions
 
 Remise du travail pratique 2
 Travail individuel.
