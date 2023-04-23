@@ -61,7 +61,7 @@ La réponse :
 
 ## Solution de la mission M03
 
-État de la mission : résolue, partiellement résolue, non résolue
+État de la mission : résolue
 
 Démarche
 
@@ -210,6 +210,7 @@ Démarche
 ## Solution de la mission M06
 
 État de la mission : résolue
+Démarche
 
 #### M06.1 : 
 ```
@@ -274,7 +275,6 @@ Apres avoir installe et executer la commande ```shellcheck backup.sh```, rien n'
 ## Solution de la mission M07
 
 État de la mission : résolue
-
 Démarche
 
 #### M07.1
@@ -294,7 +294,6 @@ D'apres la sortie de la commande ```systemctl status cron.service```, le service
 ## Solution de la mission M08
 
 État de la mission : résolue
-
 Démarche
 
 #### M08.1 :
