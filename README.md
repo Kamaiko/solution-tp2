@@ -4,12 +4,12 @@ Remise du travail pratique 2
 Travail individuel.
 
 Identification
-
+```
 Cours      : Utilisation et administration des systèmes informatiques
 Sigle      : INF1070
 Session    : Hiver 2023
-Groupe     : Numéro du cours-groupe
-
+Groupe     : 11
+```
 Enseignant : Johnny Tsheke Shele
 
 Auteur     : Patrick Patenaude (PATP01129302)
