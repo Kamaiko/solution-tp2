@@ -26,10 +26,6 @@ Voici le résultat du script tp2/checkM01.sh : "Tout fonctionne correctement."
 
 
 
-
-
-
-
 ## Solution de la mission M02
 
 État de la mission : résolue
@@ -40,7 +36,7 @@ Afficher la liste de tous les containers Docker présent sur la machine :
 ``` docker ps -a ```
 Savoir combien de containers dockers sont présent sur la machine : 
 ```docker ps -aq | wc -l ```
-Réponse : 5
+- Réponse : 5
 
 Pour savoir combien de container Docker sont en train de tourner :
 ```docker ps --filter "status=running" | wc -l ```
