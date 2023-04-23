@@ -40,7 +40,7 @@ Savoir combien de containers dockers sont présent sur la machine :
 
 Pour savoir combien de container Docker sont en train de tourner :
 ```docker ps --filter "status=running" | wc -l ```
-Réponse : 4
+- Réponse : 4
 
 
 #### M02.2 : 
@@ -67,7 +67,7 @@ Démarche
 
 #### M03.1
 Obtenir les en-têtes de la réponse HTTP : ```curl -kI hhtps://localhost```
-Réponse : "Caddy"
+- Réponse : "Caddy"
 
 
 
@@ -105,7 +105,7 @@ localhost {
 }
 ```
 
-Commande utilisée : ```cat /etc/caddy/Caddyfile```
+- Commande utilisée : ```cat /etc/caddy/Caddyfile```
 
 
 
@@ -119,11 +119,11 @@ Commande utilisée : ```cat /etc/caddy/Caddyfile```
 
 Démarche
 #### M04.1
-L'adresse IPv4 de la base de donnée mariadb est : ```172.18.0.2```
+- L'adresse IPv4 de la base de donnée mariadb est : ```172.18.0.2```
 
-La commande ping : ```ping 172.18.0.2 -c 4``` nous affiche que les 4 paquets envoyés ont été reçu avec succès. Cela signifie que la machine peut communiquer avec le serveur de base de données.
+- La commande ping : ```ping 172.18.0.2 -c 4``` nous affiche que les 4 paquets envoyés ont été reçu avec succès. Cela signifie que la machine peut communiquer avec le serveur de base de données.
 
-Résultat obtenu : "4 paquets transmis, 4 reçus, 0% paquets perdus, temps 3058 ms"
+- Résultat obtenu : "4 paquets transmis, 4 reçus, 0% paquets perdus, temps 3058 ms"
 
 
 #### M04.2
@@ -138,10 +138,10 @@ Je me suis connecté à la base de donnée mariadb avec le client MySQL. Voici l
 
 
 #### M04.4
-'create database nextcloud;' : ```Query OK, 1 row affected (0,00 sec)```
-'create user 'patrickpatenaude'@'%' identified by 'qwerty';  :  ```Query OK, 0 rows affected (0,00 sec)```
-'grant all privileges on nextcloud.* to 'patrickpatenaude'@'%';  :  ```Query OK, 0 rows affected (0,00 sec)```
-'flush privileges' ;  :  ```Query OK, 0 rows affected (0,00 sec)```
+- 'create database nextcloud;' : ```Query OK, 1 row affected (0,00 sec)```
+- 'create user 'patrickpatenaude'@'%' identified by 'qwerty';  :  ```Query OK, 0 rows affected (0,00 sec)```
+- 'grant all privileges on nextcloud.* to 'patrickpatenaude'@'%';  :  ```Query OK, 0 rows affected (0,00 sec)```
+- 'flush privileges' ;  :  ```Query OK, 0 rows affected (0,00 sec)```
 
 
 
@@ -193,15 +193,15 @@ Démarche
  sudo -u "#33" php occ db:convert-type --port=3306 --password=qwerty mysql patrickpatenaude mariadb nextcloud
  ```
 
- ```sudo -u "#33"``` : exécute la commande en tant qu'utilisateur #33, qui est l'utilisateur sous lequel Nextcloud s'exécute.
-```php occ``` : exécute le script occ pour gérer les opérations de Nextcloud.
-```db:convert-type``` : commande à exécuter pour convertir le type de la base de données.
-```--port=3306``` : spécifie le port utilisé par la base de données (3306 est le port par défaut pour MariaDB/MySQL).
-```--password=qwerty``` : spécifie le mot de passe de l'utilisateur de la base de données (dans ce cas, patrickpatenaude).
-```mysql``` : spécifie le type de base de données avant la conversion.
-```patrickpatenaude``` : nom d'utilisateur de la base de données.
-```mariadb``` : spécifie le type de base de données après la conversion.
-```nextcloud``` : nom de la base de données utilisée par Nextcloud.
+-  ```sudo -u "#33"``` : exécute la commande en tant qu'utilisateur #33, qui est l'utilisateur sous lequel Nextcloud s'exécute.
+- ```php occ``` : exécute le script occ pour gérer les opérations de Nextcloud.
+- ```db:convert-type``` : commande à exécuter pour convertir le type de la base de données.
+- ```--port=3306``` : spécifie le port utilisé par la base de données (3306 est le port par défaut pour MariaDB/MySQL).
+- ```--password=qwerty``` : spécifie le mot de passe de l'utilisateur de la base de données (dans ce cas, patrickpatenaude).
+- ```mysql``` : spécifie le type de base de données avant la conversion.
+- ```patrickpatenaude``` : nom d'utilisateur de la base de données.
+- ```mariadb``` : spécifie le type de base de données après la conversion.
+- ```nextcloud``` : nom de la base de données utilisée par Nextcloud.
  
 
 
@@ -299,11 +299,11 @@ D'apres la sortie de la commande ```systemctl status cron.service```, le service
 Démarche
 
 #### M08.1 :
-Pour trouver le repertoire de l'utilisateur 'admin', apres avoir effectue la commande : 'docker exec -it nextcloud /bin/bash',
+- Pour trouver le repertoire de l'utilisateur 'admin', apres avoir effectue la commande : 'docker exec -it nextcloud /bin/bash',
 il faut naviguer au repertoire de donnees Nextcloud ou sont stockes les fichiers de l'utilisateur admin avec la commande : ```cd /var/www/html/data/admin/files```
 
 
-A l'aide de la commande ```df -h /var/www/html/data/admin/files```, nous apercevons que les fichiers sont montes sur le point de montage ```/var/www/html```
+- A l'aide de la commande ```df -h /var/www/html/data/admin/files```, nous apercevons que les fichiers sont montes sur le point de montage ```/var/www/html```
 
 ```
 Filesystem      Size  Used Avail Use% Mounted on
