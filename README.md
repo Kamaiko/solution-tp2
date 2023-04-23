@@ -165,21 +165,20 @@ Je me suis connecté à la base de donnée mariadb avec le client MySQL. Voici l
 
 État de la mission : résolue
 Démarche
-À compléter
 
 #### M05.1
- Adresse IP du serveur nextcloud : ```172.18.0.3```
- Adresse IP du serveur mariadb : ```172.18.0.2```
+-  Adresse IP du serveur nextcloud : ```172.18.0.3```
+-  Adresse IP du serveur mariadb : ```172.18.0.2```
  
 #### M05.2
- Port de Nextcloud : ```80```
- Port de MariaDB :  ```3306```.
+- Port de Nextcloud : ```80```
+- Port de MariaDB :  ```3306```.
  
  
 #### M05.3
- Le script 'occ' se trouve dans le repertoire '/var/www/html/occ'. Il est trouve par la commande ```find / -name occ```
+- Le script 'occ' se trouve dans le repertoire '/var/www/html/occ'. Il est trouve par la commande ```find / -name occ```
  
- Le shebang de ce script est : ```#!/usr/bin/env php```. Il est trouve par la commande ```head -n 1 /usr/src/nextcloud/occ```
+ -Le shebang de ce script est : ```#!/usr/bin/env php```. Il est trouve par la commande ```head -n 1 /usr/src/nextcloud/occ```
  
  
  
