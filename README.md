@@ -176,12 +176,21 @@ M05.3
  
  
 M05.4
- 
+ La commande affiche les instructions du script, tel que l'usage, les options, les commandes disponibles, etc.
  
 M05.5
  
- 
- 
+ VOici la commandde qui utilise le script occ pour convertir la base de donnees Nextcloud qui etait auparavant dans le format "mysql" en un format "mariadb" : 'sudo -u "#33" php occ db:convert-type --port=3306 --password=qwerty mysql patrickpatenaude mariadb nextcloud'
+
+ "sudo -u "#33"" : exécute la commande en tant qu'utilisateur #33, qui est l'utilisateur sous lequel Nextcloud s'exécute.
+"php occ" : exécute le script occ pour gérer les opérations de Nextcloud.
+"db:convert-type" : commande à exécuter pour convertir le type de la base de données.
+"--port=3306" : spécifie le port utilisé par la base de données (3306 est le port par défaut pour MariaDB/MySQL).
+"--password=qwerty" : spécifie le mot de passe de l'utilisateur de la base de données (dans ce cas, patrickpatenaude).
+"mysql" : spécifie le type de base de données avant la conversion.
+"patrickpatenaude" : nom d'utilisateur de la base de données.
+"mariadb" : spécifie le type de base de données après la conversion.
+"nextcloud" : nom de la base de données utilisée par Nextcloud.
  
 
 
