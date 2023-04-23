@@ -22,7 +22,7 @@ Auteur     : Patrick Patenaude (PATP01129302)
 
 Démarche
 
-Voici le résultat du script tp2/checkM01.sh : "Tout fonctionne correctement."
+Voici le résultat du script ```tp2/checkM01.sh``` : "Tout fonctionne correctement."
 
 
 
