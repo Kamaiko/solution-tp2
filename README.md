@@ -187,7 +187,7 @@ Démarche
  
 #### M05.5
  
- VOici la commandde qui utilise le script occ pour convertir la base de donnees Nextcloud qui etait auparavant dans le format "mysql" en un format "mariadb" : 
+ Voici la commmande qui utilise le script occ pour convertir la base de donnees Nextcloud qui etait auparavant dans le format "mysql" en un format "mariadb" : 
  ```
  sudo -u "#33" php occ db:convert-type --port=3306 --password=qwerty mysql patrickpatenaude mariadb nextcloud
  ```
