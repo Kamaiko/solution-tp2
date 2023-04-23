@@ -200,9 +200,59 @@ M05.5
 Solution de la mission M06
 
 État de la mission : résolue
-À compléter
+
+M06.1 : 
+DRIVER    VOLUME NAME
+local     tp2_caddy_data
+local     tp2_mariadb
+local     tp2_nextcloud
 
 
+M06.2 :
+#!/bin/bash
+
+# Vérifier qu'il y ait un argument
+if [ -z "$1" ]; then
+  echo "Utilisation : $0 container_id"
+  exit 1
+fi
+
+# Récupérer le nom du conteneur et le chemin à sauvegarder
+container="$1"
+container_name=$(docker inspect --format '{{.Name}}' "$container" | sed 's/\///g')
+chemin=$(docker inspect --format='{{range .Config.Env}}{{println .}}{{end}}' "$container" | grep '^PATH' | cut -d= -f2)
+
+# Vérifier qu'un chemin a été trouvé
+if [ -z "$chemin" ]; then
+  echo "Aucun chemin trouvé pour $container"
+  exit 1
+fi
+
+# Récupérer le nom du volume
+volume=$(docker inspect --format='{{range .Mounts}}{{if eq .Destination "'"${chemin}"'"}}{{.Name}}{{end}}{{end}}' "$container")
+
+# Vérifier si un volume est monté
+if [ -n "$volume" ]; then
+  # Sauvegarder le volume
+  docker run --rm --volumes-from "$container" -v "$PWD":/backup alpine tar czf "/backup/${container_name}_${volume}.tar.gz" -C "$chemin" .
+  echo "Sauvegarde du volume $volume terminée"
+else
+  # Sauvegarder le répertoire
+  docker run --rm -v "$PWD":/backup "$container" tar czf "/backup/${container_name}.tar.gz" -C "$chemin" .
+  echo "Sauvegarde du répertoire $chemin terminée"
+fi
+
+
+
+M06.3 :
+-rw-r--r-- root/root   6059546 2023-04-22 23:00 backup/mariadb_mysql.tar.gz
+-rw-r--r-- root/root 169369137 2023-04-22 23:00 backup/nextcloud_html.tar.gz
+
+
+
+
+M06.4 :
+Apres avoir installe et executer la commande 'shellcheck backup.sh', rien n'est rien affiche au terminal apres la gestion des erreurs.
 
 
 
@@ -213,8 +263,12 @@ Solution de la mission M07
 État de la mission : résolue
 
 Démarche
-À compléter
 
+M07.1
+Voici la tache cron qui doit etre executee : '0 17 * * * /home/patp01129302/Téléchargements/tp2/backup.sh 045ebed38c01'
+
+M07.2
+D'apres la sortie de la commande 'systemctl status cron.service', le service cron est active sur la machine virtuelle car le statut du service est 'active (running)'
 
 
 
@@ -226,8 +280,23 @@ Solution de la mission M08
 État de la mission : résolue
 
 Démarche
-À compléter
 
+M08.1 :
+Pour trouver le repertoire de l'utilisateur 'admin', apres avoir effectue la commande : 'docker exec -it nextcloud /bin/bash',
+il faut naviguer au repertoire de donnees Nextcloud ou sont stockes les fichiers de l'utilisateur admin avec la commande : 'cd /var/www/html/data/admin/files'
+
+Nous pouvons apercevoir avec la commande 'ls' que les fichiers 
+
+A l'aide de la commande 'df -h /var/www/html/data/admin/files', nous apercevons que les fichiers sont montes sur le point de montage '/var/www/html'
+
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/sda5        24G   19G  4.3G  82% /var/www/html
+
+
+
+
+M08.2 :
+Une fois conecte sur Nextcloud, nous pouvons retrouver tous les fichiers en cliquant sur l'icone "Fichiers" dans le menu en haut a gauche de l'interface. Cela nous mene a l'explorateur de fichiers de Nextcloud.
 
 
 
@@ -237,7 +306,7 @@ Démarche
 
 Solution de la mission M09
 
-État de la mission : résolue
+État de la mission : non-résolue
 
-Démarche
-À compléter
+
+
