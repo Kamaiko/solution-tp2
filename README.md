@@ -5,10 +5,10 @@ Travail individuel.
 
 Identification
 
-## Cours      : Utilisation et administration des systèmes informatiques
-## Sigle      : INF1070
-## Session    : Hiver 2023
-## Groupe     : 11
+### Cours      : Utilisation et administration des systèmes informatiques
+### Sigle      : INF1070
+### Session    : Hiver 2023
+### Groupe     : 11
 
 Enseignant : Johnny Tsheke Shele
 
