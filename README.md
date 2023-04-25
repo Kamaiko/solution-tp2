@@ -8,10 +8,8 @@ Remise du travail pratique 2
 ### Sigle      : INF1070
 ### Session    : Hiver 2023
 ### Groupe     : 11
-
-Enseignant : Johnny Tsheke Shele
-
-Auteur     : Patrick Patenaude (PATP01129302)
+### Enseignant : Johnny Tsheke Shele
+###Auteur     : Patrick Patenaude (PATP01129302)
 
 
  
