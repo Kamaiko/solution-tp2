@@ -1,9 +1,8 @@
 #  🚀 TP2: Solutions
 
 Remise du travail pratique 2
-Travail individuel.
 
-Identification
+# Identification
 
 ### Cours      : Utilisation et administration des systèmes informatiques
 ### Sigle      : INF1070
